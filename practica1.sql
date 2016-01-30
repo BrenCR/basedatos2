@@ -44,3 +44,33 @@ CREATE TABLE PELICULA
     HORARIO VARCHAR2(5),
     CONSTRAINT PK_ID_HORARIO PRIMARY KEY(ID_HORARIO),
     CONSTRAINT FK1_ID_PELICULA FOREIGN KEY(ID_PELICULA) REFERENCES PELICULA(ID_PELICULA));
+    
+    
+    
+    
+    
+    set serveroutput on;
+
+create or replace procedure HOLA_MUNDO( nombre in varchar2)
+as
+begin
+--AQUI VA LA LOGICA
+
+DBMS_OUTPUT.PUT_LINE('HOLA COMO ESTAS' || nombre);
+end;
+/
+
+BEGIN
+HOLA_MUNDO('ALFREDO BRENDA');
+END;
+/
+
+DECLARE
+VALOR NUMBER;
+BEGIN
+
+SUMA(12,8,VALOR);
+dbms_output.put_line('LA SUMA ES'||VALOR);
+
+END;
+/
